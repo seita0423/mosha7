@@ -1,0 +1,268 @@
+
+body {
+  min-height: 100%;
+  position: relative;
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 1360px;
+  min-height: 93vh;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+img {
+  max-width: 100%;
+}
+
+/* ヘッダー */
+.header-width {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  background-color: #fff;
+}
+
+.header_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1360px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 24px 0;
+}
+/* ハンバーガーメニュー */
+
+.btn{
+  position: relative;
+width: 60px;
+height: 60px;
+/* background-color: aqua; */
+  z-index: 10;
+}
+.btn i {
+  position: absolute;
+  left: 30px;
+  width: 30px;
+  height: 2px;
+  background-color: #000;
+  transition: .5s;
+
+}
+.btn i:nth-of-type(1){
+  top: 25px;
+}
+.btn i:nth-of-type(2){
+  top: 35px;
+}
+
+.btn.active i:nth-of-type(1){
+transform: translateY(5px) rotate(-45deg);
+}
+.btn.active i:nth-of-type(2){
+transform: translateY(-5px) rotate(45deg);
+
+}
+.nav_container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: cadetblue; */
+  color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: .5s;
+}
+.nav_container.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* メニューを開いた時線を白くする */
+.btn.active i{
+  background-color: #fff;
+}
+
+.nav_item{
+  background: #000;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+
+}
+header ul {
+  padding: 24px 40px;
+}
+header li{
+font-size: 14px;
+  padding: 8px;
+}
+/* メイン */
+#top {
+padding-top: 96px;
+padding-bottom: 160px;
+}
+
+.products {
+  margin: 16px 0;
+}
+.furniture {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.furniture img {
+  padding: 0 0 8px 0;
+}
+.furniture li {
+  width: 23%;
+  margin-bottom: 40px;
+  font-size: 12px;
+
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+}
+.page p {
+padding: 16px;
+}
+.page a {
+  padding: 16px;
+  }
+
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  /* width: 100%; */
+  max-width: 1360px;
+  margin: 20px auto;
+  padding: 0 40px;
+}
+footer ul {
+  display: flex;
+}
+
+footer li {
+  padding: 0 30px 0px 0px;
+
+}
+
+
+/* Aboutページ */
+.about_width{
+  padding-top: 120px;
+  /* padding-bottom: 160px; */
+  max-width: 600px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 26px;
+}
+.about_width h1{
+  margin-bottom: 32px;
+
+}
+.about p {
+  margin-bottom: 32px;
+}
+
+/* Companyページ */
+
+.company {
+  /* width: 100%; */
+  max-width: 1360px;
+  min-height: 93vh;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.company_width {
+  padding-top: 120px;
+  max-width: 600px;
+  /* margin: 0 auto; */
+
+}
+.company h1 {
+  margin-bottom: 32px;
+}
+.company dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+.company dt {
+  width: 30%;
+  border-bottom: solid 1px #000;
+  padding: 20px 10px;
+}
+.company dd {
+  width: 70%;
+  border-bottom: solid 1px #000;
+  padding: 20px 10px;
+}
+iframe {
+  margin-bottom: 32px;
+}
+
+/* アイテムページ */
+.item{
+padding-top: 120px;
+
+}
+.item h1 {
+  padding-bottom: 24px;
+}
+.item_width {
+  display: flex;
+  margin-bottom: 60px;
+  max-width: 800px;
+justify-content: space-between;
+text-align: justify;
+}
+.item p {
+  font-size: 14px;
+  margin-bottom: 24px;
+
+}
+.link {
+  display: block;
+text-align: center;
+}
+.item_dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item_text dt {
+  width: 30%;
+}
+.item_text dd {
+  width: 70%;
+}
+.item_width img{
+  width: 100%;
+}
+.item .item_text {
+  width: 100%;
+padding-left: 64px;
+
+}
+
+
+@media screen and (max-width:900px) {
+  .furniture li{
+    width: 47%;
+  }
+footer {
+  flex-direction: column;
+}
+}
